@@ -1,0 +1,157 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="style_cv.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form action="post-cv" method="POST">
+                    <!-- dénomination -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="form-group col-xs-6 en-ligne">
+                                    <label for="boite">raison sociale</label>
+                                    <input class="form-control top-input-ajust long-input" id="boite" name="boite"
+                                        placeholder="Si possible">
+                                </div>
+                                <!-- réponse -->
+                                <div class="form-group col-xs-2">
+                                    <button type="submit" class="btn btn-success">Envoyer !</button>
+                                </div>
+                                <br />
+                                <div class=" col-xs-2">
+                                    <a href="cv.html">
+                                        <input type="button" class="btn btn-info" value="retour au cv">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="form-group en-ligne">
+                            <label for="nom">nom</label>
+                            <input class="form-control top-input-ajust long-input" id="nom" name="nom" required>
+                        </div>
+                        <div class="form-group en-ligne">
+                            <label for="prenom">prénom</label>
+                            <input class="form-control top-input-ajust long-input" id="prenom" name="prenom" required>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group en-ligne">
+                            <label for="tel">tél</label>
+                            <input class="form-control top-input-ajust long-input" id="tel" name="tel required"
+                                placeholder="01 ou 06">
+                        </div>
+                        <div class="form-group en-ligne">
+                            <label for="mail">email</label>
+                            <input type="email class=" form-control top-input-ajust long-input" id="mail"
+                                name="mail required" placeholder="_____@__.__">
+                        </div>
+
+                    </div>
+                    <!-- poste -->
+                    <div id="cadre-poste">
+                        <div>
+                            <div>
+                                <span class="cadre"><label for="poste">poste à pouvoir</label> </span>
+                            </div>
+                            <div class="form-group en-ligne">
+                                <input class="form-control long-input" name="poste" id="poste" placeholder="poste">
+                            </div>
+                            <div class="form-group en-ligne">
+                                <input class="form-control long-add" name="loc" id="loc"
+                                    placeholder="localisation (ville/quartier/gare...)">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control long-desc" name="desc" id="desc"
+                                placeholder="faites-moi rêver" rows="5" cols="3"></textarea>
+                        </div>
+                    </div>
+                    <!-- petits plus -->
+                    <div class="row">
+                        <div class="col-xs-5 centre">
+                            <label class="cadre" for="petits plus">PETIT PLUS</label>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="container">
+                        <div class="row">
+                            <div class="form-group col-xs-3 en-ligne">
+                                <label for="salaire">salaire proposé</label>
+                                <select name="salaire" id="salaire">
+                                    <option value="45">moins de 45K</option>
+                                    <option value="50">entre 45 et 50k</option>
+                                    <option value="55">entre 50 et 55k</option>
+                                    <option value="60">entre 55 et 60k</option>
+                                    <option value="plus">plus de 60K</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-xs-3 en-ligne">
+                                <label for="ip">intéressement/participation</label>
+                                <select name="ip" id="ip">
+                                    <option value="0">rien</option>
+                                    <option value="1">jusqu'à 1k</option>
+                                    <option value="4">jusqu'à 4k</option>
+                                    <option value="7">jusqu'à 7k</option>
+                                    <option value="plus">plus de 7k</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="form-group col-xs-3 en-ligne vert-alig">
+                                <label for="rythme">rythme de travail</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rythme" id="rythme2" value="39"
+                                        checked>
+                                    <label class="form-check-label pas-en-gras" for="rythme2">39 heures + RTT</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rythme" id="rythme1" value="35">
+                                    <label class="form-check-label pas-en-gras" for="rythme1">35 heures</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-3 en-ligne vert-alig">
+                                <label for="av">renseignements divers</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="cantine" id="av1"
+                                        value="true">
+                                    <label class="form-check-label pas-en-gras" for="av1">cantine</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="tr" id="av2" value="true">
+                                    <label class="form-check-label pas-en-gras" for="av2">tickets restaurant</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="chqv" id="av3" value="true">
+                                    <label class="form-check-label pas-en-gras" for="av3">chèques vacances</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="park" id="av4" value="true">
+                                    <label class="form-check-label pas-en-gras" for="av4">parking</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="velo" id="at5" value="true">
+                                    <label class="form-check-label pas-en-gras" for="av5">indemnisation vélo</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

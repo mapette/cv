@@ -1,0 +1,137 @@
+body {
+    font-family: Bookman;
+    margin: 15px;
+}
+
+.titre {
+    text-align: center;
+    background-color: skyblue;
+    color: white;
+    font-weight: bold;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 3px;
+}
+
+.en-ligne {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#marge-gauche {
+    text-align: center;
+    border: 1px solid rgb(47, 106, 235);
+    border-radius: 5px;
+    padding: 12px;
+}
+
+#marge-droite {
+    text-align: justify;
+    padding-left: 0;
+}
+
+.parag-droite {
+    width: 95%;
+    margin: auto;
+    padding: 5px;
+}
+
+.centre {
+    text-align: center;
+}
+
+.gauche {
+    text-align: left;
+}
+
+.contour {
+    border: 1px solid rgb(47, 106, 235);
+    border-radius: 5px;
+}
+
+.decale {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+}
+
+#arrondi-img {
+    border-radius: 15px;
+}
+
+.poste {
+    color: rgb(47, 106, 235);
+    font-weight: bold;
+}
+
+.reponse {
+    border: solid 2px;
+    border-color: red;
+    padding: 15px;
+    text-align: center;
+    margin: auto;
+    width: 400px;
+}
+
+.reponse:hover {
+    background-color: bisque;
+}
+
+#blink {
+    transition: 0.01s;
+}
+
+/**************/
+/* formulaire */
+/**************/
+form {
+    margin: 15px 15px;
+}
+
+.form-group {
+    margin-bottom: 0px;
+}
+
+input {
+    margin: 15px;
+}
+
+.long-desc {
+    width: 550px;
+}
+
+.long-input {
+    width: 200px;
+}
+
+.long-loc {
+    width: 400px;
+}
+
+.top-input-ajust{
+    margin-top: 0px;
+}
+
+
+#cadre-poste {
+    border: solid 1px;
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 585px;
+    background-color: goldenrod;
+    color: navajowhite;
+}
+
+.cadre {
+    border: solid 2px purple;
+    padding: 2px;
+}
+
+.pas-en-gras {
+    font-weight: normal;
+}
+
+.vert-alig {
+    vertical-align: top;
+}
