@@ -7,9 +7,11 @@
 </head>
 
 <body>
+
     <div class="container">
         <div class="row">
             <div class="col">
+
                 <form action="post-cv" method="POST">
                     <!-- dénomination -->
                     <div class="container">
@@ -19,16 +21,6 @@
                                     <label for="boite">raison sociale</label>
                                     <input class="form-control top-input-ajust long-input" id="boite" name="boite"
                                         placeholder="Si possible">
-                                </div>
-                                <!-- réponse -->
-                                <div class="form-group col-xs-2">
-                                    <button type="submit" class="btn btn-success">Envoyer !</button>
-                                </div>
-                                <br />
-                                <div class=" col-xs-2">
-                                    <a href="cv.html">
-                                        <input type="button" class="btn btn-info" value="retour au cv">
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -47,13 +39,13 @@
                     <div>
                         <div class="form-group en-ligne">
                             <label for="tel">tél</label>
-                            <input class="form-control top-input-ajust long-input" id="tel" name="tel required"
+                            <input class="form-control top-input-ajust long-input" id="tel" name="tel" required
                                 placeholder="01 ou 06">
                         </div>
                         <div class="form-group en-ligne">
                             <label for="mail">email</label>
-                            <input type="email class=" form-control top-input-ajust long-input" id="mail"
-                                name="mail required" placeholder="_____@__.__">
+                            <input type="email class=" form-control top-input-ajust long-input" id="mail" name="mail"
+                                required placeholder="_____@__.__">
                         </div>
 
                     </div>
@@ -113,7 +105,8 @@
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="rythme" id="rythme2" value="39"
                                         checked>
-                                    <label class="form-check-label pas-en-gras" for="rythme2">39 heures + RTT</label>
+                                    <label class="form-check-label pas-en-gras" for="rythme2">39 heures +
+                                        RTT</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="rythme" id="rythme1" value="35">
@@ -140,18 +133,58 @@
                                     <label class="form-check-label pas-en-gras" for="av4">parking</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="velo" id="at5" value="true">
+                                    <input class="form-check-input" type="checkbox" name="velo" id="av5" value="true">
                                     <label class="form-check-label pas-en-gras" for="av5">indemnisation vélo</label>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- boutons -->
+                    <div class="form-group en-ligne">
+                        <button type="submit" class="btn btn-success">
+                            Modèle mail
+                        </button>
+                        <a href="cv.html">
+                            <input type="button" class="btn btn-info" value="retour au cv">
+                        </a>
+                        <button class="btn btn-primary" onclick="sendMail() ; return false">
+                            Mail préparé
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
-
     </div>
 
+    <script type="text/javascript">
+        function sendMail() {
+            let subjectMail = `proposition d'emploi chez ` + document.getElementById('boite').value
+            let bodyMail = `bonjour Sophie,%0ALa société ` + document.getElementById('boite').value +
+                ` est très intéressée par votre profil et vous propose de candidater pour un poste de ` +
+                document.getElementById('poste').value +
+                ` situé à ` + document.getElementById('loc').value + `%0A` +
+                document.getElementById('desc').value + `%0A` +
+                `La rémunération de départ est de ` + document.getElementById('salaire').value + `K euros, ` +
+                `(participation/intéressement moyen de ces 5 dernières années : ` + document.getElementById('ip').value + `K euros).%0A%0A` +
+                `Pour info, sachez que le rythme de travail est de  35/39 heures. (supprimer la mention inutile)%0A` +
+                `L'établissement propose (supprimez les mentions inutiles) :%0A` +
+                `  d'un restaurant d'entreprise` + `%0A` +
+                `  de tickets restaurant` + `%0A` +
+                `  de chèques vacances` + `%0A` +
+                `  d'un parking auto/vélo` + `%0A` +
+                `  une indemnisation kilométrique pour les cyclistes` + `%0A%0A` +
+                `Vous pouvez me contacter au ` +
+                document.getElementById('tel').value + ` ` +
+                `ou par mail : ` + document.getElementById('mail').value + `%0A` +
+                `Afin que nous fixions un rendez-vous.%0A%0A` +
+                `A très bientôt j'espère%0A       ` +
+                document.getElementById('prenom').value + ` ` + document.getElementById('nom').value + `%0A%0A`
+            let link = 'mailto:sophie.joffre@cegetel.net' +
+                `?subject=` + subjectMail +
+                '&body=' + bodyMail
+            window.location.href = link
+        }
+    </script>
 </body>
 
 </html>

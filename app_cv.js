@@ -15,6 +15,6 @@ app.listen(port, () => {
 })
 
 app.post('/post-cv', (req, res) => {
-  res.send(lib.AfficheDataCv(req.body))
+  res.send(lib.AfficheModeleLettre(req.body))
 })
 
